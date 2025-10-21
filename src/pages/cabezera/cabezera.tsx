@@ -5,7 +5,6 @@ import CabezeraDerecha from "../../componentes/cabezera/cabezeraDerecha"
 import logo from "../../assets/imagenes/logo.png"
 
 export default function Cabezera() {
-    
   const navigate = useNavigate()
   
   return(

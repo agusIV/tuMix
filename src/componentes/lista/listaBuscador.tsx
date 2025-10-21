@@ -1,3 +1,4 @@
+import {useDispositivo } from "../../contextAPI/dispositivoContext";
 interface Producto {
   nombre: string;
   precios: number[];
@@ -12,15 +13,15 @@ interface ListaBuscadorProps {
   lista: Producto[];
   categoriasSeleccionadas: string[];
   onCategoriaChange: (categoria: string) => void; // Tipo más simple
-  dispositivo: boolean
 }
 
-export default function ListaBuscador({ lista, categoriasSeleccionadas, onCategoriaChange, dispositivo }: ListaBuscadorProps) {
+export default function ListaBuscador({ lista, categoriasSeleccionadas, onCategoriaChange }: ListaBuscadorProps) {
   const categorias = [...new Set(lista.flatMap(p => p.categorias))]
+  const {esMovil} = useDispositivo()
   
   return (
     <div id="listaBuscador" className="d-flex gap-2">
-      {dispositivo ? (
+      {esMovil ? (
         <div>
           <button id="listaFiltroCelular" className="rounded-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
             Filtrar

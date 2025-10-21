@@ -29,6 +29,9 @@
 .cajaNombre{
   width: 100%;
 }
+.listaProducto{
+  
+}
 .listaImagen{
   width: 20%;
 }
@@ -102,7 +105,7 @@ __________________________________
 }
 
 /*
-@media (max-width: 992px) {
+@media (max-width: 769px) {
   #lista{
     width: 95%;
     min-width: 344px;

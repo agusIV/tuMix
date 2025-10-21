@@ -1,12 +1,12 @@
 #cabezera{
   background-color: #d6670c;
+  width: 100%;
 }
 #cabezeraLogo{
   width: 90px;
-  height: 90px;
 }
 #cabezeraLogo img{
-  height: 90px;
+  width: 100%;
   background-color: white;
   border-radius: 999px;
   transition: 0.2s ease;
@@ -41,3 +41,9 @@
 .cabezeraBotones:hover {
   color: var(--bs-offcanvas-hover);
 }
+
+/*@media (max-width: 768px) {
+  #cabezera{
+    min-width: 100%;
+  }
+}*/

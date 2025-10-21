@@ -1,9 +1,14 @@
 #catalogo{
-  width: 977px;
+  max-width: 977px;
+  width: 95%;
   background-color: #ed8330; 
 }
 #catalogoTitulo{
   background-color: #d6670c;
+}
+#catalogoTituloMovil{
+  background-color: #d6670c;
+  font-size: 20px;
 }
 .catalogoCategoria{
   position: relative;
@@ -29,16 +34,17 @@
   font-size: 30px;
   text-align: center;
 }
+.catalogoNombreMovil {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  bottom: 30px;
+  font-size: 15px;
+  text-align: center;
+}
 
-@media (max-width: 992px) {
-  #catalogo {
-    width: 95%;
-    min-width: 300px;
-  }
+@media (max-width: 977px) {
   .catalogoCategoria{
     width: 48%;
-  }
-  .catalogoNombre{
-    font-size: 24px;
   }
 }
