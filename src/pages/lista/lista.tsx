@@ -3,10 +3,11 @@ import { useSearchParams} from 'react-router-dom';
 import ListaBuscador from "../../componentes/lista/listaBuscador";
 import ListaProductos from "../../componentes/lista/listaProductos";
 import { useLista } from "../../contextAPI/listaContext";
-import { useState } from "react";
+import { useDispositivo } from "../../contextAPI/dispositivoContext";
 
 export default function Lista(){
   const { lista } = useLista()
+  const {esMovil} = useDispositivo()
   const [searchParams, setSearchParams] = useSearchParams();
   const categoriasSeleccionadas = searchParams.getAll("categoria");
 
@@ -24,18 +25,16 @@ export default function Lista(){
     return categoriasSeleccionadas.length === 0 || 
       producto.categorias.some(cat => categoriasSeleccionadas.includes(cat));
   });
-  const [dispositivo] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+  
   return(
-    <div id={dispositivo ? "listaMovil" : "lista"} className="mx-auto my-5">
+    <div id={esMovil ? "listaMovil" : "lista"} className="mx-auto my-5">
       <ListaBuscador 
         lista={lista}
         categoriasSeleccionadas={categoriasSeleccionadas}
         onCategoriaChange={handleCategoriaChange}
-        dispositivo={dispositivo}
       />
       <ListaProductos 
         productosFiltrados={prodFiltrados}
-        dispositivo={dispositivo} 
       />
     </div>
   )
