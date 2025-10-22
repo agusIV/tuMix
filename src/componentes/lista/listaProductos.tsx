@@ -18,7 +18,7 @@ export default function ListaProductos({ productosFiltrados }: ListaProductosPro
   const {esMovil} = useDispositivo()
 
   return(
-    <div id={`listaProductos${esMovil ? "Movil":""}`} className="my-5 d-flex flex-wrap gap-3 justify-content-center">
+    <div id={`listaProductos${esMovil ? "Movil":""}`} className={`d-flex flex-wrap justify-content-center ${esMovil ? "my-3 gap-1": "my-5 gap-3"}`}>
       {productosFiltrados.map(producto => { 
         const imagen = new URL(`../../assets/imagenes/logo.png`, import.meta.url).href
         return (

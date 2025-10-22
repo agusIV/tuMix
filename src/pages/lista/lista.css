@@ -3,7 +3,7 @@
   min-height: 100vh;
 }
 #listaBuscador{
-  font-size: 20px
+  font-size: 25px
 }
 #listaFiltroCelular{
   background-color: #ed8330;
@@ -21,7 +21,6 @@
 .listaCheckBox{
   height: 28px;
   border-bottom: 2px solid #ed8330;
-  padding: 3px;
 }
 .listaCheckBox input[type="checkbox"]{
   accent-color: #ed8330;
@@ -29,6 +28,21 @@
 .cajaNombre{
   width: 100%;
 }
+.icono{
+  font-size: 25px;
+  text-decoration: none;
+  color: inherit;
+}
+.iconoMovil{
+  font-size: 35px;
+  text-decoration: none;
+  color: inherit;
+}
+.icono:hover{
+  color: #d6670c;
+}
+________________________________________
+
 .listaProducto{
   
 }

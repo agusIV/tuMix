@@ -20,7 +20,7 @@ export default function ListaBuscador({ lista, categoriasSeleccionadas, onCatego
   const {esMovil} = useDispositivo()
   
   return (
-    <div id="listaBuscador" className="d-flex gap-2">
+    <div id="listaBuscador" className={`d-flex justify-content-center ${esMovil ? "gap-3":"gap-4"}`}>
       {esMovil ? (
         <div>
           <button id="listaFiltroCelular" className="rounded-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
@@ -37,7 +37,7 @@ export default function ListaBuscador({ lista, categoriasSeleccionadas, onCatego
               {categorias.map(c => {
                 const id = `categoria-${c}`
                 return(
-                  <div key={c} className="listaCheckBox my-1">
+                  <div key={c} className="listaCheckBox mb-1">
                     <input 
                       id={id}
                       type="checkbox" 
@@ -74,6 +74,10 @@ export default function ListaBuscador({ lista, categoriasSeleccionadas, onCatego
           </div>
         </div>
       )}
+      <a className={`bi bi-instagram icono${esMovil ? "Movil": ""}`} target="_blank" href="https://www.instagram.com/dietetica_tumix/?hl=es">{esMovil ? "":"dietetica_tuMix"}</a>
+      <a className={`bi bi-whatsapp icono${esMovil ? "Movil": ""}`} target="_blank" href="https://wa.me/message/7QAL3UFTWW2XO1">{esMovil ? "":"221-2026966"}</a>
+      <a className={`bi bi-facebook icono${esMovil ? "Movil": ""}`} target="_blank">{esMovil ? "":"dietetica_tuMix"}</a>
+      <a className={`bi bi-geo-alt icono${esMovil ? "Movil": ""}`} target="_blank">{esMovil ? "":"envios"}</a>
     </div>
   )
 }

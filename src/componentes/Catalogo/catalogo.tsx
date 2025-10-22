@@ -17,9 +17,9 @@ export default function Catalogo() {
   }
 
   return (
-    <div id="catalogo" className='mx-auto my-5 rounded-5 overflow-hidden shadow-lg'>
-      <h2 id={`catalogoTitulo${esMovil ? "Movil":""}`} className='text-center p-3'>CATEGORIAS</h2>
-      <div id="catalogoSecciones" className='d-flex flex-wrap gap-2 justify-content-center py-3'>
+    <div id="catalogo" className={`mx-auto rounded-5 overflow-hidden shadow-lg ${esMovil ? "my-3":"my-5"}`}>
+      <h2 id={`catalogoTitulo${esMovil ? "Movil":""}`} className={`text-center ${esMovil ? "p-1" :"p-3"}`}>CATEGORIAS</h2>
+      <div id="catalogoSecciones" className={`d-flex flex-wrap justify-content-center ${esMovil ? "gap-1 pb-2": "gap-2 py-3"}`}>
         <div className="catalogoCategoria" onClick={() => cambiarRuta("Mix")}>
           <img className="catalogoImagen" src={mix} alt=""/>
           <div className={`catalogoNombre${esMovil ? "Movil":""}`}>mixes</div >

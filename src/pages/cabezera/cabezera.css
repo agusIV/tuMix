@@ -1,6 +1,5 @@
 #cabezera{
   background-color: #d6670c;
-  width: 100%;
 }
 #cabezeraLogo{
   width: 90px;
@@ -24,6 +23,11 @@
     width: 500px;
 }
 /*------------------*/
+@media (max-width: 768px) {
+  .offcanvas {
+    width: 75% !important;
+  }
+}
 #offcanvasNavbar {
   --bs-offcanvas-color: #fff; /* texto blanco */
   --bs-offcanvas-hover: #322617;

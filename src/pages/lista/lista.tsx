@@ -27,7 +27,7 @@ export default function Lista(){
   });
   
   return(
-    <div id={esMovil ? "listaMovil" : "lista"} className="mx-auto my-5">
+    <div id={esMovil ? "listaMovil" : "lista"} className={`mx-auto ${esMovil ? "mt-3" : "mt-5"}`}>
       <ListaBuscador 
         lista={lista}
         categoriasSeleccionadas={categoriasSeleccionadas}
