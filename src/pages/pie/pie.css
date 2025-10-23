@@ -1,3 +1,7 @@
 #pie{
-    background-color: #d6670c;
+  background-color: #d6670c;
+}
+#piePC{
+  min-width: 992px;
+  background-color: #d6670c;
 }

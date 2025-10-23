@@ -2,3 +2,8 @@
     width: 100%;
     overflow: hidden;
 }
+#inicioPC{
+    width: 100%;
+    overflow: hidden;
+    min-width: 992px;
+}

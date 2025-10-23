@@ -1,6 +1,10 @@
 #cabezera{
   background-color: #d6670c;
 }
+#cabezeraPC{
+  min-width: 992px;
+  background-color: #d6670c;
+}
 #cabezeraLogo{
   width: 90px;
 }
@@ -45,9 +49,3 @@
 .cabezeraBotones:hover {
   color: var(--bs-offcanvas-hover);
 }
-
-/*@media (max-width: 768px) {
-  #cabezera{
-    min-width: 100%;
-  }
-}*/

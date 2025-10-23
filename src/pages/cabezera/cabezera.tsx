@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import CabezeraBuscador from "../../componentes/cabezera/cabezeraBuscador"
 import CabezeraDerecha from "../../componentes/cabezera/cabezeraDerecha"
 import logo from "../../assets/imagenes/logo.png"
+import { useDispositivo } from "../../contextAPI/dispositivoContext";
 
 export default function Cabezera() {
   const navigate = useNavigate()
-  
+  const {esMovil} = useDispositivo()
+
   return(
-    <nav id="cabezera" className="navbar navbar-expand-lg fs-5">
+    <nav id={`cabezera${esMovil ? "":"PC"}`} className="navbar navbar-expand-lg fs-5">
       <div className="container-fluid d-flex align-items-center flex-nowrap">
         <div 
           id="cabezeraLogo" 

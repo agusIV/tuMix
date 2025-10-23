@@ -26,6 +26,10 @@ export default function CabezeraBuscador({navigate}: Props) {
   const irAProducto = (producto: Producto) => {
     navigate(`/producto`, {state: {producto}})
   }
+  const buscarProductos = (fil: Array<Producto>) => {
+    const parametro = new URLSearchParams({filtrados: JSON.stringify(fil)})
+    navigate(`/Lista?${parametro}`);
+  }
 
   const manejarSeleccionado = (producto: Producto) => {
     setConsulta(producto.nombre)
@@ -48,9 +52,7 @@ export default function CabezeraBuscador({navigate}: Props) {
           onFocus={() => setSugerencias(true)}
           onBlur={() => setTimeout(() => setSugerencias(false), 200)}//delay para permitir click
         />
-        <Button variant="outline-secondary">
-          🔍
-        </Button>
+        <Button variant="outline-secondary" className="bi bi-search" onClick={() => buscarProductos(filtrados)}></Button>
       </InputGroup>
       {sugerencias && consulta && (
         <ListGroup id="buscadorLista" className="position-absolute w-100">

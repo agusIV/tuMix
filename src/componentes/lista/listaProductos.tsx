@@ -16,7 +16,12 @@ interface ListaProductosProps {
 export default function ListaProductos({ productosFiltrados }: ListaProductosProps){
   const navigate = useNavigate()
   const {esMovil} = useDispositivo()
-
+  console.log(productosFiltrados);
+  if (productosFiltrados.length == 0){
+    return(
+      <h1>nada</h1>
+    )
+  }
   return(
     <div id={`listaProductos${esMovil ? "Movil":""}`} className={`d-flex flex-wrap justify-content-center ${esMovil ? "my-3 gap-1": "my-5 gap-3"}`}>
       {productosFiltrados.map(producto => { 
